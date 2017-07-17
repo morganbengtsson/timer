@@ -8,7 +8,9 @@
 
 class Timer {
 public:
+  Timer();
   void call(const std::function<void()> & func, const int delay, const int runs = 1);
+  std::atomic_bool run;
 private:
   std::vector<std::future<void>> futures_;
 };

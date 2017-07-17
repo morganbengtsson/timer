@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.7)
 project(timer)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 11)
 
 set(HEADER_FILES timer.hpp)
 set(SOURCE_FILES main.cpp timer.cpp)
