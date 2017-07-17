@@ -1,5 +1,10 @@
 #include <iostream>
+
+#include "timer.hpp"
+
 int main() {
-  std::cout << "Hello, World!" << std::endl;
+  Timer t;
+  t.call([](){std::cout << "Hello world!\n";}, 2, 3);
+  t.call([](){std::cout << "Hello other world!\n";}, 1, 1);
   return 0;
 }
