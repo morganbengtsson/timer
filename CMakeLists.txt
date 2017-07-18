@@ -3,9 +3,14 @@ project(timer)
 
 set(CMAKE_CXX_STANDARD 11)
 
+add_subdirectory(external/Catch)
+include_directories(external/Catch/include)
+
 set(HEADER_FILES timer.hpp)
 set(SOURCE_FILES main.cpp timer.cpp)
 add_executable(timer ${SOURCE_FILES})
+
+add_executable(timer_test test.cpp)
 
 find_package(Threads)
 target_link_libraries(timer ${CMAKE_THREAD_LIBS_INIT} )
