@@ -8,11 +8,12 @@
 
 class Timer {
 public:
-  Timer();
+  Timer(const bool run = true);
   void call(const std::function<void()> & func, const int delay, const int runs = 1);
   std::atomic_bool run;
+  std::vector<std::future<void>> futures;
 private:
-  std::vector<std::future<void>> futures_;
+
 };
 
 #endif //TIMER_TIMER_HPP
